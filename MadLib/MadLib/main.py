@@ -66,3 +66,12 @@ def funnyMessage(age, weight, height):
     print result
     print "well... some sort of shape!"
 funnyMessage(age, weight, height)
+
+#to say good bye several times
+for i in range(1,4):
+     print "The End, in  ", i 
+     i+=1
+
+#reference
+#print now.year, now.month, now.day, now.hour, now.minute, now.second
+#print now.hour
