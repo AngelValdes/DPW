@@ -16,3 +16,9 @@ message1Template = '''
 message1Template = message1Template.format(**locals())
 #Print message
 print message1Template
+
+#Gather some more info
+age = int(raw_input("Enter your age: "))
+birthday_already = raw_input("Did you have your birthday this year already: (y/n) ")
+height = raw_input("Enter your height: ")
+weight = raw_input("Enter your weight: ")
