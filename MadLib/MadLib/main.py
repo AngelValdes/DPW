@@ -27,3 +27,34 @@ weight = raw_input("Enter your weight: ")
 age_range = ["children","adult","senior"]
 foods = {"breakfast":"sandwich", "lunch":"rice and chicken", "dinner":"milk and cereal"}
 now = datetime.datetime.now()
+
+#function age range
+def ageRange():
+    if (age<18):
+        result = age_range[0]
+    elif (age>=18 and age<=55):
+        result = age_range[1]
+    else:
+        result = age_range[2]
+    return result
+print "You are ", ageRange()
+
+#function year borned
+def yearBorn(currentYear, age):
+    if (birthday_already.upper() == "Y"):
+        result = currentYear - age 
+    else:
+        result = currentYear - age - 1
+    return result
+print "You were born in ", yearBorn(now.year, age)
+
+#function to determine food type based on time of day
+def foodType():
+    if(now.hour<12):
+        result = foods["breakfast"]
+    elif(now.hour>=12 and now.hour<15):
+        result = foods["lunch"]
+    else:
+        result = foods["dinner"]
+    return result
+print "You should be eating " + foodType() + " at this time"
