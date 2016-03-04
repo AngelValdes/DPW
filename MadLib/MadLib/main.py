@@ -58,3 +58,11 @@ def foodType():
         result = foods["dinner"]
     return result
 print "You should be eating " + foodType() + " at this time"
+
+#function to display some funny message
+def funnyMessage(age, weight, height):
+    result = "Based on your age of {age}, weight of {weight}, and height of {height}, you are in excellent shape!"
+    result = result.format(**locals())
+    print result
+    print "well... some sort of shape!"
+funnyMessage(age, weight, height)
