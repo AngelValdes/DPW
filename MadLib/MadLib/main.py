@@ -22,3 +22,8 @@ age = int(raw_input("Enter your age: "))
 birthday_already = raw_input("Did you have your birthday this year already: (y/n) ")
 height = raw_input("Enter your height: ")
 weight = raw_input("Enter your weight: ")
+
+#Define some internal values to use in functions
+age_range = ["children","adult","senior"]
+foods = {"breakfast":"sandwich", "lunch":"rice and chicken", "dinner":"milk and cereal"}
+now = datetime.datetime.now()
