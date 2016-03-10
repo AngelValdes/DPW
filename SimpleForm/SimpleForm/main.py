@@ -9,8 +9,8 @@ import webapp2 #use the webapp2 library
 
 class MainHandler(webapp2.RequestHandler): 
     def get(self):# main function
-        self.response.write("Hello")
-
+        p = Page() #instantiate an object of Page type
+        
 class Page(object): #class for page properties and behaviours
     def __init__(self): #initialization method
         #define head variable to contain common initial html elements
