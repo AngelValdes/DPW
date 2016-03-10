@@ -11,6 +11,10 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):# main function
         self.response.write("Hello")
 
+class Page(object): #class for page properties and behaviours
+    def __init__(self): #initialization method
+        pass
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
