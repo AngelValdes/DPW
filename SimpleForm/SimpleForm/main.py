@@ -54,6 +54,20 @@ class Page(object): #class for page properties and behaviours
     </div>
 '''
  
+#define submission variable to contain form html elements for printing submited values on screen
+        self.submission = '''
+        <h3>Thank you for sending your comments</h3>
+        <div>
+            <form>
+                <label>Full Name: </label>{self.full_name}<br/>
+                <label>Phone: </label>{self.phone}<br/>
+                <label>Email: </label>{self.email}<br/>
+                <label>Gender: </label>{self.gender}<br/>
+                <label>Subject: </label>{self.subject}<br/>
+                <label>Additional comments: </label>{self.additional_comments}<br/>
+            </form>
+        </div>
+'''
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
