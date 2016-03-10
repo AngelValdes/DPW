@@ -73,7 +73,9 @@ class Page(object): #class for page properties and behaviours
 </body>
 </html>
 '''
-
+        def print_form(self): #method to compose initial form
+            all = self.head + self.form + self.close
+            return all 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
