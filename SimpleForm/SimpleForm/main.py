@@ -10,7 +10,19 @@ import webapp2 #use the webapp2 library
 class MainHandler(webapp2.RequestHandler): 
     def get(self):# main function
         p = Page() #instantiate an object of Page type
-        
+        if self.request.GET: #determine if there is any query string variables
+            self.full_name = self.request.GET['fullName'] #get query string variables values
+            self.phone = self.request.GET['phone']
+            self.email = self.request.GET['email']
+            self.gender = self.request.GET['gender']
+            self.subject = self.request.GET['subject']
+            self.additional_comments = self.request.GET['additionalComments']
+            all = p.print_submission() #call submission method
+            all = all.format(**locals())   #replace placeholders for local values
+            self.response.write(all) #write out the final result to the browser
+        else:
+            self.response.write(p.print_form()) #write out to the user the result of calling print_form method from p instance
+
 class Page(object): #class for page properties and behaviours
     def __init__(self): #initialization method
         #define head variable to contain common initial html elements
