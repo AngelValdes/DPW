@@ -25,7 +25,35 @@ class Page(object): #class for page properties and behaviours
 <body>
     <h2>Contact Us!</h2>
 '''
-
+#define form variable to contain form html elements for initial form
+        self.form = '''
+    <h3>By sending your questions and comments below</h3>
+    <div>
+        <form method="GET" action="">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required="required">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" required="required">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required="required">
+            <fieldset>
+                <legend>Details</legend>
+                <input type="radio" name="gender" value="male" checked="checked"> Male
+                <input type="radio" name="gender" value="female"> Female<br><br>
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                    <option value="sales">sales</option>
+                    <option value="marketing">marketing</option>
+                    <option value="other">other</option>
+                </select>
+                <label for="additionalComments">Additional comments</label>
+                <textarea rows="8" style="width:100%" id="additionalComments" name="additionalComments"></textarea>
+            </fieldset>            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+'''
+ 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
