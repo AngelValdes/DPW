@@ -9,7 +9,7 @@ import webapp2 #use the webapp2 library
 
 class MainHandler(webapp2.RequestHandler): 
     def get(self):# main function
-        pass
+        self.response.write("Hello")
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
