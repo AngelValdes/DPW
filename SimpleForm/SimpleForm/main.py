@@ -68,6 +68,12 @@ class Page(object): #class for page properties and behaviours
             </form>
         </div>
 '''
+#define close variable to contain common closing html elements
+        self.close = '''
+</body>
+</html>
+'''
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
