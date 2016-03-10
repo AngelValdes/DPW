@@ -76,6 +76,11 @@ class Page(object): #class for page properties and behaviours
         def print_form(self): #method to compose initial form
             all = self.head + self.form + self.close
             return all 
+
+        def print_submission(self): #method to compose final submited values displayed in screen
+            all = self.head + self.submission + self.close
+            return all
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
