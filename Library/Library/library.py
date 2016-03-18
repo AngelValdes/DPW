@@ -52,3 +52,9 @@ class CarInventory(object):
     def get_cars(self): #return inventory sorted by brand name
         newlist = sorted(self.__car_list, key=lambda x: x.brand_name, reverse=False)
         return newlist
+
+    def get_inventory_value(self): #calculate inventory value, no depreciation considered
+        output = 0
+        for car in self.__car_list:        
+            output += int(car.price)
+        return output
