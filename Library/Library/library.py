@@ -58,3 +58,7 @@ class CarInventory(object):
         for car in self.__car_list:        
             output += int(car.price)
         return output
+
+    def get_most_expensive_car(self): #get the most expensive car from the inventory
+        newlist = sorted(self.__car_list, key=lambda x: x.price, reverse=True)
+        return newlist[0]  
