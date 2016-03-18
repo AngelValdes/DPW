@@ -45,7 +45,7 @@ class CarInventory(object):
 
     def __init__(self):
         self.__car_list = [] #array of owned cars
-
+        
     def add_car(self, car): #add car to inventory
         self.__car_list.append(car)
 
@@ -58,11 +58,11 @@ class CarInventory(object):
         for car in self.__car_list:        
             output += int(car.price)
         return output
-
+        
     def get_most_expensive_car(self): #get the most expensive car from the inventory
         newlist = sorted(self.__car_list, key=lambda x: x.price, reverse=True)
-        return newlist[0] 
-
+        return newlist[0]      
+       
     def get_cheapest_car(self): #get the cheapest car from the inventory
         newlist = sorted(self.__car_list, key=lambda x: x.price, reverse=False)
-        return newlist[0]  
+        return newlist[0] 
