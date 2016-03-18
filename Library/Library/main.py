@@ -28,6 +28,28 @@ class MainHandler(webapp2.RequestHandler):
         car3.price = 83000
         car_inventory.add_car(car3)
 
+#self.response.write(car_inventory.get_cars())
+        if self.request.GET: #determine if there is any query string variables
+            page = ResultPage()
+            new_car = Car() 
+            #get query string variables values
+            new_car.brand_name = self.request.GET['brandName'] 
+            new_car.year = self.request.GET['year']
+            new_car.price = self.request.GET['price']
+            car_inventory.add_car(new_car)
+            cars = car_inventory.get_cars()
+            output = "<ul>"
+            for car in cars:        
+                output += "<li>Car: (" + str(car.year) + ") - " + car.brand_name + " $" + str(car.price) + "</li>"
+            output +="</ul>"
+            page.list_items = output          
+            page.totals += "Total inventory value: " + str(car_inventory.get_inventory_value()) + "<br/>" 
+            cheapest_car = car_inventory.get_cheapest_car()
+            page.totals += "The cheapest car: " + cheapest_car.brand_name + " at $" + str(cheapest_car.price) 
+        else:
+            page = FormPage()
+
+        self.response.write(page.print_out())
 
 
 app = webapp2.WSGIApplication([
