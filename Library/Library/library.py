@@ -16,4 +16,26 @@ class Car(object):
         self.__year = 0
         self.__price = 0
 
-   
+    #public property brand_name setter and getter
+    @property
+    def brand_name(self):
+        return self.__brand_name
+    @brand_name.setter
+    def brand_name(self, value):
+        self.__brand_name = value
+    #public property year setter and getter
+    @property
+    def year(self):
+        return self.__year
+    @year.setter
+    def year(self, value):
+        if value > 1905 and value <= datetime.datetime.now().year + 1: #business rules for car year
+            self.__year = value
+    #public property price setter and getter
+    @property
+    def price(self):
+        return self.__price
+    @price.setter
+    def price(self, value):
+        if value > 0: #business rule for price, must be positive to assign it
+            self.__price = value
