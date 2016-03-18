@@ -27,8 +27,8 @@ class MainHandler(webapp2.RequestHandler):
         car3.brand_name = "BMW"
         car3.price = 83000
         car_inventory.add_car(car3)
-
-#self.response.write(car_inventory.get_cars())
+        
+        #self.response.write(car_inventory.get_cars())
         if self.request.GET: #determine if there is any query string variables
             page = ResultPage()
             new_car = Car() 
@@ -51,6 +51,17 @@ class MainHandler(webapp2.RequestHandler):
 
         self.response.write(page.print_out())
 
+        
+        
+            
+       
+        #car.brand_name =""
+        #car.model = ""
+        #car.color = ""
+        #car.year = 0
+        #car.price = 0
+
+        
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
