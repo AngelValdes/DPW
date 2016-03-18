@@ -48,3 +48,7 @@ class CarInventory(object):
 
     def add_car(self, car): #add car to inventory
         self.__car_list.append(car)
+
+    def get_cars(self): #return inventory sorted by brand name
+        newlist = sorted(self.__car_list, key=lambda x: x.brand_name, reverse=False)
+        return newlist
