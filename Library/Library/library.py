@@ -61,4 +61,8 @@ class CarInventory(object):
 
     def get_most_expensive_car(self): #get the most expensive car from the inventory
         newlist = sorted(self.__car_list, key=lambda x: x.price, reverse=True)
+        return newlist[0] 
+
+    def get_cheapest_car(self): #get the cheapest car from the inventory
+        newlist = sorted(self.__car_list, key=lambda x: x.price, reverse=False)
         return newlist[0]  
