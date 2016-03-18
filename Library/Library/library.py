@@ -46,3 +46,5 @@ class CarInventory(object):
     def __init__(self):
         self.__car_list = [] #array of owned cars
 
+    def add_car(self, car): #add car to inventory
+        self.__car_list.append(car)
