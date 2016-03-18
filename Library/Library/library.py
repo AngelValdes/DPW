@@ -39,3 +39,10 @@ class Car(object):
     def price(self, value):
         if value > 0: #business rule for price, must be positive to assign it
             self.__price = value
+
+#utility library to manage a car inventory and do some basic functionalities and calculations
+class CarInventory(object):
+
+    def __init__(self):
+        self.__car_list = [] #array of owned cars
+
