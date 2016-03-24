@@ -42,9 +42,9 @@ class MainHandler(webapp2.RequestHandler):
         <hr/>
         <p>Please select one of the options from the <strong>menu above</strong> to get more information about any of my tools</p>
 """
-        #use the utility extra class to display the date formatted
+        #use the utility extra class to display the date formatted US format
         page._head = page._head.replace("{date}", utility.get_date())
-        #print page content
+        #print page content 
         self.response.write(page.print_out())
 
 app = webapp2.WSGIApplication([
