@@ -61,4 +61,12 @@ Template body
 </body>
 </html>
 """
+     #public property title setter and getter, just to show I know how to create them :)
+    @property
+    def title(self):
+        return self.__title
+    @title.setter
+    def title(self, value):
+        self.__title = value
+
     
