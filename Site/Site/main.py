@@ -6,6 +6,9 @@ assignment: Dynamic Site
 instructor: REBECCA CARROLL
 '''
 import webapp2 #use the webapp2 library
+from pages import * #use the pages classes
+from data import * #use the database emulation class
+from library import Utility #use the extra utility class
 
 
 class MainHandler(webapp2.RequestHandler):    
