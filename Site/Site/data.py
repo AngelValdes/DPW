@@ -29,5 +29,15 @@ class ToolsInfo(object):
         self.saw.weight = "75 lb"
         self.saw.description = "15 Amp 12 in. Sliding Compound Miter Saw"
 
-       
+        self.drill = Tool()#instantiate drill object with values
+        self.drill.price = "$129.00"
+        self.drill.make = "DeWALT"
+        self.drill.model = "DCD771C2"
+        self.drill.image = "images/drill.jpg"
+        self.drill.height = "4.25 in"
+        self.drill.width = "9.875 in"
+        self.drill.weight = "6.75 lb"
+        self.drill.description = "20-Volt Max Lithium-Ion 1/2 in. Cordless Drill/Driver Kit"
+
+        
 
