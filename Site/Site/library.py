@@ -11,4 +11,7 @@ import datetime
 class Utility(object): #utility library class
     def __init__(self): #initialization method
         pass
- 
+    #method to return formatted date in US format
+    def get_date(self):
+        today = datetime.datetime.today()
+        return today.strftime("%m/%d/%y")
