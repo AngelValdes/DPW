@@ -76,4 +76,22 @@ Template body
 class ContentPage(Page):
     def __init__(self): #initialization method
         super(ContentPage,self).__init__()#execute parent init
-        
+        #define template body for content page with place holders
+        self._body = """
+<table class="table">
+            <tr>
+                <td>
+                   <h3>{description}</h3>                    
+                   <img src='{picture}'/>
+                </td>
+                <td class='bg-primary'>
+                    <p>Make: {make}</p>
+                    <p>Model: {model}</p>
+                    <p style='font-size:35px;'>{price}</p>
+                    <p>Height: {height}</p>
+                    <p>Width: {width}</p>
+                    <p>Weight: {weight}</p>
+                </td>
+            </tr>
+        </table>
+"""
