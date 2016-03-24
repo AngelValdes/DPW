@@ -16,7 +16,8 @@ class MainHandler(webapp2.RequestHandler):
         utility = Utility() #instantiate a utility object
         page = ContentPage()  #instantiate a page object
         if self.request.GET: #determine if there is any query string variables
-           pass
+            tools_info = ToolsInfo()
+            
         else:
             #show welcome page
             page._body = """
