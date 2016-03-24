@@ -69,4 +69,7 @@ Template body
     def title(self, value):
         self.__title = value
 
-    
+    def print_out(self): #method to compose initial form
+        all = self._head + self._body + self._close
+        return all
+
