@@ -39,5 +39,15 @@ class ToolsInfo(object):
         self.drill.weight = "6.75 lb"
         self.drill.description = "20-Volt Max Lithium-Ion 1/2 in. Cordless Drill/Driver Kit"
 
+        self.air_compressor = Tool()#instantiate compressor object with values
+        self.air_compressor.price = "$199.00"
+        self.air_compressor.make = "DeWALT"
+        self.air_compressor.model = "DW1KIT18PP"
+        self.air_compressor.image = "images/aircompressor.jpg"
+        self.air_compressor.height = "19.875 in"
+        self.air_compressor.width = "16.875 in"
+        self.air_compressor.weight = "40.75 lb"
+        self.air_compressor.description = "6 Gal. Heavy Duty Air Compressor Combo Kit"
+
         
 
