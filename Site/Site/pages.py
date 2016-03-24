@@ -49,4 +49,16 @@ class Page(object): #class with common functionality by all pages to be inherite
 Template body
 """
 
-      
+        #closing the page
+        self._close = """
+        <!-- Site footer -->
+        <footer class="footer">
+            <p>&copy; 2016 My Tools Site, Inc.</p>
+        </footer>
+    </div> <!-- /container -->  
+    <script src="scripts/jquery-2.2.2.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+</html>
+"""
+    
