@@ -13,7 +13,8 @@ from library import Utility #use the extra utility class
 
 class MainHandler(webapp2.RequestHandler):    
     def get(self):# main function     
-       pass
+       utility = Utility() #instantiate a utility object
+       page = ContentPage()  #instantiate a page object
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
