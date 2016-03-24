@@ -17,7 +17,18 @@ class MainHandler(webapp2.RequestHandler):
         page = ContentPage()  #instantiate a page object
         if self.request.GET: #determine if there is any query string variables
             tools_info = ToolsInfo()
-            
+            #choose between the tooltypes saw, drill, aircompressor, nailgun, sander, then build the object to by used in the replace
+            if self.request.GET['toolType'] == "saw":
+                tool = tools_info.saw            
+            elif self.request.GET['toolType'] == "drill":
+                tool = tools_info.drill 
+            elif self.request.GET['toolType'] == "aircompressor":
+                tool = tools_info.air_compressor 
+            elif self.request.GET['toolType'] == "nailgun":
+                tool = tools_info.nail_gun 
+            elif self.request.GET['toolType'] == "sander":
+                tool = tools_info.sander 
+           
         else:
             #show welcome page
             page._body = """
