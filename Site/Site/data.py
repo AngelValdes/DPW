@@ -59,5 +59,13 @@ class ToolsInfo(object):
         self.nail_gun.weight = "2 lb"
         self.nail_gun.description = "18-Gauge Pneumatic Brad Nailer"
 
-       
+        self.sander = Tool()#instantiate sander object with values
+        self.sander.price = "$79.00"
+        self.sander.make = "DeWALT"
+        self.sander.model = "DWE6423K"
+        self.sander.image = "images/sander.jpg"
+        self.sander.height = "6.2 in"
+        self.sander.width = "7.25 in"
+        self.sander.weight = "4 lb"
+        self.sander.description = "3 Amp 5 in. Corded Variable Speed Random Orbit Sander"
 
