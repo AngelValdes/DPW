@@ -16,3 +16,8 @@ class Tool(object):
         self.weight = ""
         self.description = "" 
 
+#Data class to mimic a database of information about home tools (saw, drill, aircompressor, nailgun, sander), Instantiating one of each type of tool.
+class ToolsInfo(object):
+    def __init__(self):
+       pass
+
