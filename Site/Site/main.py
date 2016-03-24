@@ -28,7 +28,8 @@ class MainHandler(webapp2.RequestHandler):
                 tool = tools_info.nail_gun 
             elif self.request.GET['toolType'] == "sander":
                 tool = tools_info.sander 
-           
+            #replace the text placeholders with values from selected object.
+            page._body = page._body.replace("{description}",tool.description).replace("{picture}",tool.image).replace("{make}",tool.make).replace("{model}",tool.model).replace("{price}",tool.price).replace("{height}",tool.height).replace("{width}",tool.width).replace("{weight}",tool.weight)
         else:
             #show welcome page
             page._body = """
