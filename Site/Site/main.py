@@ -10,7 +10,6 @@ from pages import * #use the pages classes
 from data import * #use the database emulation class
 from library import Utility #use the extra utility class
 
-
 class MainHandler(webapp2.RequestHandler):    
     def get(self):# main function     
         utility = Utility() #instantiate a utility object
@@ -42,9 +41,9 @@ class MainHandler(webapp2.RequestHandler):
         <hr/>
         <p>Please select one of the options from the <strong>menu above</strong> to get more information about any of my tools</p>
 """
-        #use the utility extra class to display the date formatted US format
+        #use the utility extra class to display the date formatted
         page._head = page._head.replace("{date}", utility.get_date())
-        #print page content 
+        #print page content
         self.response.write(page.print_out())
 
 app = webapp2.WSGIApplication([

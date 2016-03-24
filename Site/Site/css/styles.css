@@ -1,0 +1,19 @@
+﻿/*center the form in page and change font family*/
+body{
+   
+}
+/*update heading styles*/
+h2{
+    color: #4CAF50;
+}
+h3{
+    font-weight: 500;
+    color: darkgray;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+.active{
+    background-color: red;
+}
