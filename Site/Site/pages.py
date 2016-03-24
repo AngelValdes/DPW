@@ -75,4 +75,5 @@ Template body
 
 class ContentPage(Page):
     def __init__(self): #initialization method
-        pass
+        super(ContentPage,self).__init__()#execute parent init
+        
