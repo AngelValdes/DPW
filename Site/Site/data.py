@@ -49,5 +49,15 @@ class ToolsInfo(object):
         self.air_compressor.weight = "40.75 lb"
         self.air_compressor.description = "6 Gal. Heavy Duty Air Compressor Combo Kit"
 
-        
+        self.nail_gun = Tool()#instantiate nail gun object with values
+        self.nail_gun.price = "$119.00"
+        self.nail_gun.make = "DeWALT"
+        self.nail_gun.model = "DWFP12233"
+        self.nail_gun.image = "images/nailgun.jpg"
+        self.nail_gun.height = "13.09 in"
+        self.nail_gun.width = "3.74 in"
+        self.nail_gun.weight = "2 lb"
+        self.nail_gun.description = "18-Gauge Pneumatic Brad Nailer"
+
+       
 
