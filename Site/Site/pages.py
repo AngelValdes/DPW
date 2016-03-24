@@ -73,3 +73,6 @@ Template body
         all = self._head + self._body + self._close
         return all
 
+class ContentPage(Page):
+    def __init__(self): #initialization method
+        pass
