@@ -44,4 +44,9 @@ class Page(object): #class with common functionality by all pages to be inherite
         </div>
         <p>Today: {date}</p>
 """
-       
+        #form body section of the page
+        self._body = """
+Template body
+"""
+
+      
